@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(95deg, #353434, #340c51);
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: #282828;
+    border-bottom: 1px solid #444;
+    color: #f4f4f4;
+}
+
+#profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.profile-card {
+    background: #333333;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-card h2 {
+    margin: 10px 0;
+    color: #b483ff;
+}
+
+.profile-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.logout-button {
+    margin-top: 15px;
+    background: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #c0392b;
+}

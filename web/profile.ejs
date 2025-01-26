@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+<header>
+    <h1>Your Profile</h1>
+</header>
+<section id="profile-section">
+    <div class="profile-card">
+        <h2 id="username">Welcome, <%= username %>!</h2>
+        <p>Email: <span id="email"><%= email %></span></p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+</section>
+<script>
+    function logout() {
+        fetch('/logout', { method: 'POST' }).then(() => {
+            window.location.href = '/login.html';
+        });
+    }
+</script>
+</body>
+</html>

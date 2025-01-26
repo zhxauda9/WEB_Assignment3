@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const path = require("path");
 
+
 const app = express();
 
 const pool = new Pool({
@@ -14,6 +15,10 @@ const pool = new Pool({
     password: '2005',
     port: 1195,
 });
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'web/')); // Папка с шаблонами EJS
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'web')));
@@ -67,10 +72,25 @@ app.post('/login', async (req, res) => {
 
 app.get('/dashboard', (req, res) => {
     if (req.session.user) {
-        res.send(`Welcome, ${req.session.user.username}`);
+        const userData = {
+            username: req.session.user.username,
+            email: req.session.user.email || 'example@mail.com',
+        };
+        res.render('profile', userData);
     } else {
         res.redirect('/login.html');
     }
+});
+
+
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.redirect('/login.html');
+        }
+    });
 });
 
 app.get('/', (req, res) => {
@@ -78,5 +98,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Server running on port 3000');
+    console.log('Server running on port http://localhost:3000');
 });

@@ -1,79 +1,86 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: #f8f1e4;
-    color: #4a3323;
+    background: linear-gradient(135deg, #353434, #340c51);
+    color: #ffffff;
     margin: 0;
     padding: 0;
     padding-top: 80px;
 }
 
 header {
-    border-bottom: 1px solid #e6dbc9;
+    border-bottom: 1px solid #4a4a4a;
 }
 
 #login-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 700px;
 }
 
 .form-wrapper {
     max-width: 780px;
     width: 550px;
-    background: #fff;
+    background: #2e2d2d;
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e6dbc9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3c3c3c;
 }
 
 h2 {
-    color: #7b4d29;
+    color: #b483ff;
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px #1a1a1a;
 }
 
 label {
     font-weight: 500;
     margin-bottom: 8px;
     display: block;
+    color: #e6e6e6;
 }
 
 input {
-    border: 1px solid #d3c5b3;
+    border: 1px solid #4a4a4a;
     padding: 12px;
     font-size: 16px;
     width: 100%;
     border-radius: 8px;
-    background-color: #fdfaf5;
-    transition: border 0.3s;
+    background-color: #222121;
+    color: #ffffff;
+    transition: border 0.3s, background-color 0.3s;
 }
 
 input:focus {
     outline: none;
-    border-color: #a3835a;
+    border-color: #b483ff;
+    background-color: #292828;
 }
 
 button {
-    background: #7b4d29;
-    color: #fff;
-    padding: 10px;
+    background: cadetblue;
+    color: #222121;
+    padding: 12px;
     font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     transition: background 0.3s;
     margin-top: 10px;
+    width: 100%;
 }
 
 button:hover {
-    background: #5a3820;
+    background: #9d6eff;
 }
 
 .btn-link {
     text-decoration: none;
-    color: #82a35a;
+    color: #b483ff;
     font-weight: bold;
     text-align: center;
     display: block;
@@ -82,6 +89,5 @@ button:hover {
 }
 
 .btn-link:hover {
-    color: #82a35a;
     text-decoration: underline;
 }
