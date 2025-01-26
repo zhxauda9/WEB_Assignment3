@@ -18,8 +18,17 @@ This project is built with **Node.js**, **Express**, **PostgreSQL**, and **bcryp
 ---
 
 ## 🎨 Demo
+**Home**
+![Image alt](https://github.com/zhxauda9/WEB_Assignment3/blob/main/assets/home.png)
 
-![Dashboard Demo](https://media.giphy.com/media/3o6gE5rjjA4cQ5f4Og/giphy.gif)
+**Login**
+![Image alt](https://github.com/zhxauda9/WEB_Assignment3/blob/main/assets/login.png)
+
+**Register**
+![Image alt](https://github.com/zhxauda9/WEB_Assignment3/blob/main/assets/register.png)
+
+**Profile**
+![Image alt](https://github.com/zhxauda9/WEB_Assignment3/blob/main/assets/profile.png)
 
 ---
 
